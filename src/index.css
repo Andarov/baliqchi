@@ -1,0 +1,116 @@
+/* font  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  @apply outline-offset-2;
+  outline-color: #424769;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* components  */
+@layer components {
+  .body {
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+    color: #424769;
+    @apply text-lg font-medium leading-6;
+  }
+
+
+
+
+
+
+  /* .dropdow */
+  .dropdown {
+    @apply relative;
+  }
+
+  .dropdown:hover img {
+    @apply rotate-180 max-950:rotate-0;
+  }
+
+  .dropdown_menu {
+    @apply hidden absolute bg-white shadow-md rounded-lg space-y-1 p-2 w-60 z-30 max-950:right-0 max-950:static max-950:shadow-none max-950:ml-auto max-950:rounded-none max-950:pr-0;
+  }
+
+  .dropdown:hover .dropdown_menu {
+    @apply block;
+  }
+
+  .dropdown_item {
+    @apply flex items-center gap-1 cursor-pointer max-950:flex-row-reverse max-950:py-2 max-950:border-b max-950:justify-between max-950:border-gray-300 min-w-max transition-all duration-500;
+  }
+
+  .dropdown_item span {
+    @apply text-lg font-semibold -tracking-[0.5px];
+  }
+
+  .dropdown_item img {
+    @apply w-4 h-4 transition-transform duration-300;
+  }
+
+  .dropdown_menu .menu_item {
+    @apply w-full cursor-pointer max-950:text-right max-950:pr-0.5;
+  }
+
+  .dropdown_menu .menu_item a {
+    @apply block w-full bg-transparent px-3 py-1 rounded transition-colors !duration-300 hover:bg-slate-200 max-950:rounded-none;
+  }
+
+  .dropdown_menu .menu_item a:hover {
+    @apply max-950:bg-transparent;
+  }
+
+  .max-950-hidden {
+    @apply !hidden;
+  }
+}
+
+@layer utilities {
+  h1 {
+    @apply font-bold text-4xl max-950:text-3xl max-550:text-[28px] max-550:leading-8;
+  }
+
+  h2 {
+    @apply font-bold text-[32px] leading-9 max-950:text-[28px] max-550:text-[26px];
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b,
+  blockquote {
+    color: #161A30;
+  }
+
+  b {
+    @apply font-semibold;
+  }
+
+  input,
+  textarea {
+    @apply rounded-lg border-2 px-5 py-3.5 w-full resize-none focus:outline-0 focus:border-[#424769];
+  }
+
+  a {
+    @apply font-medium;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-7xl w-full mx-auto px-5;
+  }
+}
