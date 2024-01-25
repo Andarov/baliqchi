@@ -1,5 +1,6 @@
 import { v4 as randomId } from "uuid";
 import {
+    bandlik,
     china,
     inson,
     new1,
@@ -15,6 +16,15 @@ import {
 } from "../assets/images";
 
 export const news = [
+    {
+        id: randomId(),
+        title: "Mahallalarda tadbirkorlikni rivojlantirish, bandlikni taminlash, jinoyatchilik va huquqbuzarlikni oldini olish dolzarb vazifa",
+        image: bandlik,
+        description: [
+            "Baliqchi tumani hokimi Jasurbek Abduraimov 1-sektor hududidagi mahallalarda bo'lib mavzu yuzasidan mahalla faollari bilan muloqot olib bordi. Navbatdagi uchrashuv Mallachek mahallasida o'tkazildi",
+        ],
+        date: new Date(2024, 0, 25),
+    },
     {
         id: randomId(),
         title: "Baliqchi tumani faollar zalida 'Inson' ijtimoiy xizmatlar markazining faoliyat yo'nalishlari va boshqa bir qator masalalar bo'yicha yig'ilish bo'lib o'tdi",
