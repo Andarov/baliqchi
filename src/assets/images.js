@@ -7,5 +7,6 @@ import new6 from "./news-images/new-6.jpg";
 import new7 from "./news-images/new-7.jpg";
 import new8 from "./news-images/new-8.jpg";
 import new9 from "./news-images/new-9.jpg";
+import china from "./news-images/china.jpg";
 
-export { new1, new2, new3, new4, new5, new6, new7, new8, new9 };
+export { new1, new2, new3, new4, new5, new6, new7, new8, new9, china };
