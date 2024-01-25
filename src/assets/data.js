@@ -10,9 +10,19 @@ import {
     new7,
     new8,
     new9,
+    sessiya,
 } from "../assets/images";
 
 export const news = [
+    {
+        id: randomId(),
+        title: "Xalq deputatlari Baliqchi tumani Kengashining navbatdagi 6-chaqiriq 42-sessiyasi bo'lib o'tdi",
+        image: sessiya,
+        description: [
+            "Xalq deputatlari Baliqchi tumani Kengashining navbatdagi 6-chaqiriq 42-sessiyasi bo'lib o'tdi. Sessiyada tumandan saylangan mahalliy kengash deputatlari, siyosiy partiyalarning vakillari va boshqa taklif etilgan tashkilotlarning masullari ishtirok etishdi. Sessiyada kun tartibiga kiritilgan masalalar yuzasidan masullarning ahboroti va hisoboti tinglandi",
+        ],
+        date: new Date(2024, 0, 25),
+    },
     {
         id: randomId(),
         title: "O'zbekiston Respublikasi Prezidenti parlamentlararo munosbatlarni yanada rivojlantirish muhimligini qayd etdi",
