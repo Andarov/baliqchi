@@ -3,6 +3,7 @@ import {
     bandlik,
     china,
     inson,
+    kubok,
     new1,
     new2,
     new3,
@@ -16,6 +17,15 @@ import {
 } from "../assets/images";
 
 export const news = [
+    {
+        id: randomId(),
+        title: "“Andijon viloyati hokimi kubogi” start olmoqda",
+        image: kubok,
+        description: [
+            "Yoshlarni sport va sog'lom turmush tarziga bo'lgan ijobiy munosabatni rivojlantirish, jismoniy tarbiya va ommaviy sport bilan muntazam shug'ullanishlari uchun hududlarda ommaviy sport musobaqalarini o'tkazish orqali yoshlardan iborat jamoalarni shakllantirish maqsadida mahalla yoshlari o'rtasida to'rt bosqichli sport musobaqalari tashkil etilmoqda. ✅ Sport musobaqalari:⚽️ mini-futbol, 🏐 volеybol, 🤼‍♀️ kurash, 🏓 stol tеnnisi, 🏀 stritbol, ♟shaxmat, 🔘shashka, 💪armrеstling sport turlaridan qatnashishingiz mumkin. ✅Musobaqa 4 bosqichdan iborat: 1) mahalla; 2) sеktor; 3) tuman; 4) viloyat bosqichida bo'lib o'tadi. 📆 25-yanvardan start olgan musobaqa g'oliblari shu yilning 15-martgacha aniqlab olinadi. 📝Musobaqada ishtirok etishni istaganlar o'zi yashayotgan mahalla fuqarolar yig'inlaridagi yoshlar yеtakchilariga murojaat qilishlari mumkin. 🎉G'oliblarni viloyat hokimligining qimmatbaho esdalik sovg'alari kutmoqda",
+        ],
+        date: new Date(2024, 0, 25),
+    },
     {
         id: randomId(),
         title: "Mahallalarda tadbirkorlikni rivojlantirish, bandlikni taminlash, jinoyatchilik va huquqbuzarlikni oldini olish dolzarb vazifa",

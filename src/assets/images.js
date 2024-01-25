@@ -11,5 +11,6 @@ import china from "./news-images/china.jpg";
 import sessiya from "./news-images/sessiya.jpg";
 import inson from "./news-images/inson.jpg";
 import bandlik from "./news-images/bandlik.jpg";
+import kubok from "./news-images/kubok.jpg";
 
-export { new1, new2, new3, new4, new5, new6, new7, new8, new9, china, sessiya, inson , bandlik};
+export { new1, new2, new3, new4, new5, new6, new7, new8, new9, china, sessiya, inson , bandlik, kubok};
