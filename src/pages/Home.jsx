@@ -9,7 +9,7 @@ import ContactSection from '../components/ContactSection';
 const Home = () => {
     useEffect(() => {
         scrollTo(0, 0);
-        document.title = 'Baliqchi tuman hokimligi';
+        document.title = 'Baliqchi tuman hokimligi rasmiy websayti';
     });
     return (
         <>
