@@ -1,6 +1,7 @@
 import { v4 as randomId } from "uuid";
 import {
     china,
+    inson,
     new1,
     new2,
     new3,
@@ -14,6 +15,15 @@ import {
 } from "../assets/images";
 
 export const news = [
+    {
+        id: randomId(),
+        title: "Baliqchi tumani faollar zalida 'Inson' ijtimoiy xizmatlar markazining faoliyat yo'nalishlari va boshqa bir qator masalalar bo'yicha yig'ilish bo'lib o'tdi",
+        image: inson,
+        description: [
+            "Baliqchi tumani faollar zalida O'zbekiston Respublikasi Prezidenti huzuridagi 'Inson' ijtimoiy xizmatlar markazining faoliyat yo'nalishlari, kam taminlangan oilalarga bolalar nafaqasi va moddiy yordam tayinlash tartibi va boshqa bir qator masalalar bo'yicha yig'ilish bo'lib o'tdi. Kam taminlangan oilalarga moddiy yordamlar tayinlash, nogironligi bo'lgan shaxslar, ota-onasi horijiy davlatlarga ketgan, yetim va ota-ona huquqidan mahrum bo'lgan bolalarga vasiylik yoki homiylik belgilash, bandlik hamda mulkiy mezonlarga oid tushunchalar berildi. 'Ijtimoy himoya yagona reestri' ahborot tizimi orqali qanday holatlarda kam taminlangan oilalarga bolalar nafaqasi va moddiy yordam tayinlash yoki rad etilishi bo'yicha Ijtimoiy himoya milliy agentligi Andijon viloyati boshqarmasi boshligi A.To'lanov tushunchalar berdi. ",
+        ],
+        date: new Date(2024, 0, 25),
+    },
     {
         id: randomId(),
         title: "Xalq deputatlari Baliqchi tumani Kengashining navbatdagi 6-chaqiriq 42-sessiyasi bo'lib o'tdi",
