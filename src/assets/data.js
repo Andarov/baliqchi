@@ -14,7 +14,7 @@ import {
 export const news = [
     {
         id: randomId(),
-        title: "YOSHLAR SANOAT ZONASID YANGI ISH ORINLARI YARATILMOQDA",
+        title: "YOSHLAR SANOAT ZONASIDA YANGI ISH O'RINLARI YARATILMOQDA",
         subTitle:
             "Shuhrat Abdurahmonov ko‘chada ishlayotgan suvchilarni ko‘rgach, 64 million so‘m naqd pulni olib, 16 nafar suvchiga 4 million so‘mdan tarqatgan. ",
         image: new1,
