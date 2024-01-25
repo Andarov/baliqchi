@@ -14,7 +14,7 @@ import {
 export const news = [
     {
         id: randomId(),
-        title: "YOSHLAR SANOAT ZONASIDA YANGI ISH O'RINLARI YARATILMOQDA",
+        title: "Yoshlar sanoat zonasida yangi ish o'rinlari yaratilmoqda",
         subTitle:
             "Shuhrat Abdurahmonov ko‘chada ishlayotgan suvchilarni ko‘rgach, 64 million so‘m naqd pulni olib, 16 nafar suvchiga 4 million so‘mdan tarqatgan. ",
         image: new1,
