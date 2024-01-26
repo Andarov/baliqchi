@@ -4,6 +4,7 @@ import {
     china,
     inson,
     kubok,
+    maktab,
     new1,
     new2,
     new3,
@@ -17,6 +18,15 @@ import {
 } from "../assets/images";
 
 export const news = [
+    {
+        id: randomId(),
+        title: "Baliqchi tumani maktabgacha va maktab talimi bo'limi binosida matbuot anjumani bo'lib o'tdi",
+        image: maktab,
+        description: [
+            "Baliqchi tumani maktabgacha va maktab talimi bo'limi binosida bugun 26-yanvar kuni 'Maktabgacha talim muassasalari oziq-ovqat taminoti, bolalarning sog'lom ovqatlanishi uchun yaratilgan sharoitlar' mavzusida  matbuot anjumani bo'lib o'tdi. Unda tuman moliya bo'limi hamda maktabgacha va maktab talimi bo'limi mutasaddi masullari jurnalist va blogerlarning savollariga javob berishdi",
+        ],
+        date: new Date(2024, 0, 26),
+    },
     {
         id: randomId(),
         title: "“Andijon viloyati hokimi kubogi” start olmoqda",
