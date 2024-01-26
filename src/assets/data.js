@@ -14,10 +14,30 @@ import {
     new7,
     new8,
     new9,
+    prokuror,
     sessiya,
+    vatanparvar,
 } from "../assets/images";
 
 export const news = [
+    {
+        id: randomId(),
+        title: "'Yashirin iqtisodiyotga barham berish, biznesni soyadan olib chiqish vs teng raqobat muhitini yaratish borasida' chora tadbirlar belgilab uning amaliy ijrosiga kirishildi",
+        image: prokuror,
+        description: [
+            "Andijon viloyati Baliqchi tumani prokuraturasi, iqtisodiy jinoyatlarga qarshi kurash departamenti va soliq inspeksiyasi bilan hamkorlikda 'Yashirin iqtisodiyotga barham berish, biznesni soyadan olib chiqish vs teng raqobat muhitini yaratish' borasida chora tadbirlar belgilab uning amaliy ijrosiga kirishildi. Jumladan belgilangan tartibda davlat ro'yhatida o'tmasdan tadbirkorlik faoliyati bilan shugillanayotgan shaxslarga hamda ishchilar soni haqiqatda hisobotlarda aks ettirmasdan (konvert usulda) oylik maosh to'lab kelayotgan tadbirkorlik subektlariga, ular tamonindan faoliyatini qonuniy tarzda amalga oshirishlari va soliqlarni o'z vaqtida to'lab borishlari to'griisida tushintirish, targ'ibot ishlari amalga oshirilmoqda. Natijada yanvar oyining 19-24-kunlarida 14ta MCHJ ishchilar sonini 134ta ko'rsatib yashirin ish o'rinlarini legallashtirishgani aniqlandi. Ogohlantirish berilishiga qaramay faoliyatini qonuniylashtirmagan tadbirkorlik subektlariga nisbatan vakolat doirasida qonuniy choralar ko'rilmoqda. Misol uchun 'F.T.E-I' MCHJga nisbatan tuman soliq inspeksiyasi boshlig'ining 2024-yil 24-yanvar kungi XS-0007-sonli buyrug'iga asosan 2024-yil 25-yanvar kuni Sayyor soliq tekshiruvi o'tkazilib, belgilangan tartibda dalolatnoma rasmiylashtirildi hamda 5mln so'm miqdorida moliyaviy jarima qo'llanildi. Shu o'rinda tumanimiz aholisidan amalga oshirilgan haridlari uchun cheklarini talab qilib olishlarin va shu orqali tadbirkorlarimizning qonuniy faoliyat yuritishlariga, tovar va xizmatlarning noqonuniy aylanmasiga chek qo'yishida o'z fuqaroviy burchlarini amalga oshirishlarini so'rab qolamiz.",
+        ],
+        date: new Date(2024, 0, 26),
+    },
+    {
+        id: randomId(),
+        title: "Baliqchi tumanida vatanparvarlik oyligi davom etmoqda",
+        image: vatanparvar,
+        description: [
+            "Andijon viloyati Baliqchi tumani MMTB tassarrufidagi 56-umumiy o'rta ta'lim maktabi o'quvchilari bugun Andijon Sharqiy garnizonining  14014 _ xarbiy qismiga sayohatga bordilar.O'quvchilar bu taklifni 13-yanvar kuni majtabimizga tashrif buyurgan Xarbiy qism zobitlari tamonidan olgan edilar.Ular bugun vatan posbonlarining hayoti va kundalik mashg'ulotlari bilan yaqindan tanishdilar.",
+        ],
+        date: new Date(2024, 0, 26),
+    },
     {
         id: randomId(),
         title: "Baliqchi tumani maktabgacha va maktab talimi bo'limi binosida matbuot anjumani bo'lib o'tdi",
