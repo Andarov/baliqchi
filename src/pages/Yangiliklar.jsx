@@ -31,7 +31,7 @@ const Yangiliklar = () => {
                                     <h1>{yangilik.title}</h1>
                                     <p className="text-gray-600">{yangilik.date.toDateString()}</p>
                                     <img
-                                        className="w-full h-96 object-cover object-center rounded bg-gray-400 max-700:h-72 max-550:h-64"
+                                        className="w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
                                         src={yangilik.image}
                                         alt=""
                                         onClick={() => {
