@@ -15,5 +15,6 @@ import kubok from "./news-images/kubok.jpg";
 import maktab from "./news-images/maktab.jpg";
 import vatanparvar from "./news-images/vatanparvar.jpg";
 import prokuror from "./news-images/prokuror.jpg";
+import qabul from "./news-images/qabul.jpg";
 
-export { new1, new2, new3, new4, new5, new6, new7, new8, new9, china, sessiya, inson , bandlik, kubok, maktab, vatanparvar, prokuror};
+export { new1, new2, new3, new4, new5, new6, new7, new8, new9, china, sessiya, inson , bandlik, kubok, maktab, vatanparvar, prokuror, qabul};

@@ -15,11 +15,21 @@ import {
     new8,
     new9,
     prokuror,
+    qabul,
     sessiya,
     vatanparvar,
 } from "../assets/images";
 
 export const news = [
+    {
+        id: randomId(),
+        title: "Aholi murojaatlari tinglandi",
+        image: qabul,
+        description: [
+            "Andijon viloyati Baliqchi tumani hokimi Jasurbek Abduraimov va tuman hokimining o'rinbosarlari ishtirokida qabul o'tkazildi. Unda 35ta murojaat tinglandi. Murojaatlarning 12tasi joyida hal etildi. Muddat va vaqt talab etiladigan masalalar mutassadilarga yo'naltirildi",
+        ],
+        date: new Date(2024, 0, 27),
+    },
     {
         id: randomId(),
         title: "'Yashirin iqtisodiyotga barham berish, biznesni soyadan olib chiqish vs teng raqobat muhitini yaratish borasida' chora tadbirlar belgilab uning amaliy ijrosiga kirishildi",
