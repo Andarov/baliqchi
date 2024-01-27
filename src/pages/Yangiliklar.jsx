@@ -40,6 +40,9 @@ const Yangiliklar = () => {
                                         }}
                                     />
                                     <p>{yangilik.description}</p>
+                                    {
+                                        yangilik.videoSrc && <iframe className='w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64' src={yangilik.videoSrc} frameborder="0"></iframe>
+                                    }
                                 </div>
                             </div>
 
@@ -56,7 +59,7 @@ const Yangiliklar = () => {
                             return (
                                 <li key={item.id} className="flex flex-col gap-y-4">
                                     <img
-                                        className="w-full h-96 object-cover object-top rounded bg-gray-400 max-700:h-72 max-550:h-64"
+                                        className="w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
                                         src={item.image}
                                         alt=""
                                         onClick={() => {
