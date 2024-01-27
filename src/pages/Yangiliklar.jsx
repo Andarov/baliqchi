@@ -41,7 +41,7 @@ const Yangiliklar = () => {
                                     />
                                     <p>{yangilik.description}</p>
                                     {
-                                        yangilik.videoSrc && <iframe className='w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64' src={yangilik.videoSrc} frameborder="0"></iframe>
+                                        yangilik.videoSrc && <iframe className='w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64' src={yangilik.videoSrc} frameborder="0" allowFullScreen='true'></iframe>
                                     }
                                 </div>
                             </div>
