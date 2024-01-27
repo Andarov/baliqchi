@@ -13,10 +13,10 @@ const Footer = () => {
                     <Link to='/' className='flex gap-2 items-center'>
                         <img src={coatOfArms} alt="flag" className="w-14 h-14 max-550:w-12 max-550:h-12 max-[350px]:hidden" />
                         <img src={flag} alt="flag" className="w-[3px] h-12 rounded-[1px] max-550:h-8 max-[350px]:hidden" />
-                        <div>
-                            <h1 className="font-bold text-lg max-550:text-lg text-white">Baliqchi tuman hokimligi</h1>
-                            <p className="text-base font-normal text-white">Rasmiy web sayti</p>
-                        </div>
+                        <h1 className='flex flex-col'>
+                            <strong className="font-bold text-lg max-550:text-lg text-white">Baliqchi tuman hokimligi</strong>
+                            <span className="text-base font-normal text-white">Rasmiy web sayti</span>
+                        </h1>
                     </Link>
                 </div>
             </div>
