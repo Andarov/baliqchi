@@ -16,12 +16,22 @@ import {
     new9,
     prokuror,
     qabul,
+    respublika,
     sessiya,
     trk,
     vatanparvar,
 } from "../assets/images";
 
 export const news = [
+    {
+        id: randomId(),
+        title: "Respublika ishchi guruhi Baliqchi tumanida",
+        image: respublika,
+        description: [
+            "Respublika ishchi guruhi tamonidan Baliqchi tumanidagi mahallalar, ijtimoiy infratuzilma obektlarida amalga oshirilgan ishlar hamda hak qilinishi lozim bolgan vazifalar o'rganilmoqda. O'rganishlar davomida Qiyali mahallasida piyodalar yo'lagida shag'allashtirish amalga oshirilishi zarurligi aniqlanib yo'lakka sheben qoplamasi yotqizildi. Zahkash mahallasida yashovchi yakka yolg'iz Sanobarxon Qodirova xonadoniga suyiltirilgan gaz baloni zazrurligi aniqlanib uning murojaati qanoatlantirildi. Uy-joyining kadastr hujjatlarini tayyorlash bo'yicha tuman kadastr bo'limi mutaxasislari bilan birga fuqaroga huquqiy tushuncha berildi",
+        ],
+        date: new Date(2024, 0, 29),
+    },
     {
         id: randomId(),
         title: "Aholi murojaatlari tinglandi",
