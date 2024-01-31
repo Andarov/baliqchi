@@ -21,5 +21,6 @@ import respublika from "./news-images/respublika.jpg";
 import valeybol from "./news-images/valeybol.jpg";
 import valeyboll from "./news-images/valeyboll.jpg";
 import yarmarka from "./news-images/yarmarka.jpg";
+import ibrat from "./news-images/ibrat.jpg";
 
-export { new1, new2, new3, new4, new5, new6, new7, new8, new9, china, sessiya, inson , bandlik, kubok, maktab, vatanparvar, prokuror, qabul, trk, respublika, valeybol, valeyboll, yarmarka};
+export { new1, new2, new3, new4, new5, new6, new7, new8, new9, china, sessiya, inson , bandlik, kubok, maktab, vatanparvar, prokuror, qabul, trk, respublika, valeybol, valeyboll, yarmarka, ibrat};

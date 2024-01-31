@@ -2,6 +2,7 @@ import { v4 as randomId } from "uuid";
 import {
     bandlik,
     china,
+    ibrat,
     inson,
     kubok,
     maktab,
@@ -28,20 +29,21 @@ import {
 export const news = [
     {
         id: randomId(),
-        title: "Baliqchi tumani Chinobod shaharchasi markazida mehnat yarmarkasi o‘tkazildi.",
-        image: [yarmarka],
+        title: "Baliqchi tumani yoshlari uchun maxsus 'Ibrat farzandlari marafoni' tashkil etildi.",
+        image: [ibrat],
         description: [
-            "Baliqchi tumani Chinobod shaharchasi markazida mehnat yarmarkasi o‘tkazildi. Unda tashkilot,muassasa va sanoat korxonalari bo‘sh ish o‘rinlari bilan qatnashdi.",
+            " Baliqchi tumani yoshlari uchun maxsus 'Ibrat farzandlari marafoni' tashkil etildi. Loyihaning eng jonkuyar insonlari Rustam  Qoriyev va Iskandar Ulug'bekovich, Feruza Uralova hamda Zamira Turganbayevalar Baliqchi tumanidagi Webking academy binosida yoshlar bilan ochiq muloqot qildilar",
         ],
         date: new Date(2024, 0, 31),
     },
     {
         id: randomId(),
-        title: "Voleybol bo‘yicha viloyat ichki ishlar boshqarmasi boshlig‘i sovrini uchun xotin - qizlar o‘rtasida musobaqa bo‘lib o‘tdi.",
-        image: [valeybol, valeyboll],
+        title: "Baliqchi tumani Chinobod shaharchasi markazida mehnat yarmarkasi o‘tkazildi.",
+        image: [yarmarka],
         description: [
-            "Voleybol bo‘yicha viloyat ichki ishlar boshqarmasi boshlig‘i sovrini uchun xotin - qizlar o‘rtasida musobaqa bo‘lib o‘tdi. Voleybol bahslari viloyatning barcha shahar, tumanlarida o‘tkazilib, o‘yinlarda 2 ming nafardan ziyod xotin-qiz ishtirok etdi. Baliqchi tumanidagi musobaqaning ochilish marosimida tuman hokimi Jasurbek Abdurayimov, tuman IIB boshlig'i D.Tojiboev jamoalarni tabriklab, bahslarda omad yor bo‘lishini tilashdi. Maydonda 7 ta jamoa g‘oliblik uchun o‘zaro bahs olib borishdi. Yakunda Jasorat mahallasi xotin - qizlar jamoasi g‘alaba qozondi. Sovrinli o‘rinlar Turkiston va Sortepa mahallasi jamoalariga nasib etdi.",
+            "Baliqchi tumani Chinobod shaharchasi markazida mehnat yarmarkasi o‘tkazildi. Unda tashkilot,muassasa va sanoat korxonalari bo‘sh ish o‘rinlari bilan qatnashdi.",
         ],
+        videoSrc: 'https://www.youtube.com/embed/KdYFT5mbuog?si=b7zJumOkRFnl5J49',
         date: new Date(2024, 0, 31),
     },
     {
