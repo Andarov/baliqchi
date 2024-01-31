@@ -19,10 +19,21 @@ import {
     respublika,
     sessiya,
     trk,
+    valeybol,
+    valeyboll,
     vatanparvar,
 } from "../assets/images";
 
 export const news = [
+    {
+        id: randomId(),
+        title: "Voleybol bo‘yicha viloyat ichki ishlar boshqarmasi boshlig‘i sovrini uchun xotin - qizlar o‘rtasida musobaqa bo‘lib o‘tdi.",
+        image: [valeybol, valeyboll],
+        description: [
+            "Voleybol bo‘yicha viloyat ichki ishlar boshqarmasi boshlig‘i sovrini uchun xotin - qizlar o‘rtasida musobaqa bo‘lib o‘tdi. Voleybol bahslari viloyatning barcha shahar, tumanlarida o‘tkazilib, o‘yinlarda 2 ming nafardan ziyod xotin-qiz ishtirok etdi. Baliqchi tumanidagi musobaqaning ochilish marosimida tuman hokimi Jasurbek Abdurayimov, tuman IIB boshlig'i D.Tojiboev jamoalarni tabriklab, bahslarda omad yor bo‘lishini tilashdi. Maydonda 7 ta jamoa g‘oliblik uchun o‘zaro bahs olib borishdi. Yakunda Jasorat mahallasi xotin - qizlar jamoasi g‘alaba qozondi. Sovrinli o‘rinlar Turkiston va Sortepa mahallasi jamoalariga nasib etdi.",
+        ],
+        date: new Date(2024, 0, 29),
+    },
     {
         id: randomId(),
         title: "Respublika ishchi guruhi Baliqchi tumanida",
