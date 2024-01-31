@@ -19,6 +19,8 @@ const Yangiliklar = () => {
   const boshqaYangiliklar = news.filter(
     (item) => item.id !== (yangilik ? yangilik.id : "")
   );
+
+  console.log(yangilik.image.length);
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       setOpenModal(false);
@@ -36,12 +38,11 @@ const Yangiliklar = () => {
                   <p className="text-gray-600">
                     {yangilik.date.toDateString()}
                   </p>
-                  <div
-                    className={`${yangilik.image.length > 1}flex flex-col space-y-5`}
-                  >
-                    {yangilik.image.map((img) => {
-                      return (
+                  <div className={`flex flex-col space-y-5`}>
+                    {yangilik.image.length > 1 ? (
+                      yangilik.image.map((img, index) => (
                         <img
+                          key={index}
                           className="w-full h-full object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
                           src={img}
                           alt=""
@@ -50,9 +51,20 @@ const Yangiliklar = () => {
                             setOpenModal(true);
                           }}
                         />
-                      );
-                    })}
+                      ))
+                    ) : (
+                      <img
+                        className="w-full h-full object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
+                        src={yangilik.image}
+                        alt=""
+                        onClick={() => {
+                          setClickedImg(yangilik.image[0]);
+                          setOpenModal(true);
+                        }}
+                      />
+                    )}
                   </div>
+
                   <p>{yangilik.description}</p>
                   {yangilik.videoSrc && (
                     <iframe
@@ -78,7 +90,7 @@ const Yangiliklar = () => {
                 <li key={item.id} className="flex flex-col gap-y-4">
                   <img
                     className="w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
-                    src={item.image}
+                    src={item.image[0]}
                     alt=""
                     onClick={() => {
                       setClickedImg(item.image);
