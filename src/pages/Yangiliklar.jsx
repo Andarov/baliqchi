@@ -1,31 +1,61 @@
 import React, { useEffect, useState } from "react";
-import { news } from "../assets/data";
 // images
 import hokim from "../assets/images/other/hokim.png";
 import baliqchi from "../assets/images/svg/Frame.svg";
 import { useParams } from "react-router-dom";
+import { query } from "firebase/database";
+import { collection, onSnapshot } from "firebase/firestore";
+import { db } from "../api/firebase";
 const Yangiliklar = () => {
   const { yangilikNomi } = useParams();
+
+  const [clickedImg, setClickedImg] = useState("");
+  const [openModal, setOpenModal] = useState(false);
+  const [news, setNews] = useState([]);
+
   useEffect(() => {
     scrollTo(0, 0);
     document.title = "Baliqchi tuman hokimligi | Yangiliklar";
   }, []);
-  const [clickedImg, setClickedImg] = useState("");
-  const [openModal, setOpenModal] = useState(false);
+
   const yangilik = news.find(
     (item) =>
       yangilikNomi === item.title.toString().toLowerCase().replace(/\s+/g, "-")
   );
+
   const boshqaYangiliklar = news.filter(
     (item) => item.id !== (yangilik ? yangilik.id : "")
   );
 
-  console.log(yangilik.image.length);
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       setOpenModal(false);
     }
   });
+
+  const fetchData = async () => {
+    const q = query(collection(db, "news"));
+    onSnapshot(q, (querySnapshot) => {
+      let newsArr = [];
+      querySnapshot.forEach((doc) => {
+        newsArr.push({ ...doc.data(), id: doc.id });
+      });
+
+      let sortedArr = newsArr.sort((a, b) => {
+        const dateA = new Date(a.date.split(".").reverse().join("."));
+        const dateB = new Date(b.date.split(".").reverse().join("."));
+        return dateB - dateA;
+      });
+
+      setNews(sortedArr);
+      setLoading(false);
+    });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className="py-12 max-800:py-10 max-550:pt-6">
       <div className="flex gap-5 container max-550:flex-col max-[500px]:px-0">
@@ -35,12 +65,10 @@ const Yangiliklar = () => {
               <div className="flex flex-col gap-y-4 mb-10">
                 <div className="space-y-6 max-[500px]:px-5">
                   <h1>{yangilik.title}</h1>
-                  <p className="text-gray-600">
-                    {yangilik.date.toDateString()}
-                  </p>
+                  <p className="text-gray-600">{yangilik.date}</p>
                   <div className={`flex flex-col space-y-5`}>
-                    {yangilik.image.length > 1 ? (
-                      yangilik.image.map((img, index) => (
+                    {yangilik.images.length > 1 ? (
+                      yangilik.images.map((img, index) => (
                         <img
                           key={index}
                           className="w-full h-full object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
@@ -55,10 +83,10 @@ const Yangiliklar = () => {
                     ) : (
                       <img
                         className="w-full h-full object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
-                        src={yangilik.image}
+                        src={yangilik.images[0]}
                         alt=""
                         onClick={() => {
-                          setClickedImg(yangilik.image[0]);
+                          setClickedImg(yangilik.images[0]);
                           setOpenModal(true);
                         }}
                       />
@@ -66,10 +94,10 @@ const Yangiliklar = () => {
                   </div>
 
                   <p>{yangilik.description}</p>
-                  {yangilik.videoSrc && (
+                  {yangilik.video_link && (
                     <iframe
                       className="w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
-                      src={yangilik.videoSrc}
+                      src={yangilik.video_link}
                       frameborder="0"
                       allowFullScreen="true"
                     ></iframe>
@@ -80,6 +108,7 @@ const Yangiliklar = () => {
               <h2 className="max-[500px]:px-5">Boshqa yangiliklar</h2>
             </div>
           )}
+
           {yangilikNomi === "all-news" && (
             <h1 className="mb-10 max-[500px]:px-5">Barcha yangiliklar</h1>
           )}
@@ -90,15 +119,15 @@ const Yangiliklar = () => {
                 <li key={item.id} className="flex flex-col gap-y-4">
                   <img
                     className="w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
-                    src={item.image[0]}
+                    src={item.images[0]}
                     alt=""
                     onClick={() => {
-                      setClickedImg(item.image);
+                      setClickedImg(item.images[0]);
                       setOpenModal(true);
                     }}
                   />
                   <div className="space-y-3 max-[500px]:px-5">
-                    <p className="text-gray-600">{item.date.toDateString()}</p>
+                    <p className="text-gray-600">{item.date}</p>
                     <h3 className="text-xl font-semibold">{item.title}</h3>
                     <p>{item.description}</p>
                   </div>
