@@ -5,7 +5,7 @@ import baliqchi from "../assets/images/svg/Frame.svg";
 import adliya from '../assets/docs/adliya.pdf'
 
 const Hisobot = () => {
-  const siteLink = window.location.origin;
+  const siteLink = 'http://baliqchi.org.uz';
   useEffect(() => {
     scrollTo(0, 0);
     document.title = "Baliqchi tuman hokimligi | 2023-yil isobot";
@@ -28,7 +28,7 @@ const Hisobot = () => {
               </h3>
 
               <a
-                href={`${adliya}`}
+                href={`${siteLink}/src/assets/adliya.pdf`}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
@@ -48,7 +48,7 @@ const Hisobot = () => {
               </h3>
 
               <a
-                href={`https://abdulvahob-abdullayev.netlify.app/img/avatar/my-avatar.png`}
+                href={`${siteLink}/src/assets/iib.pdf`}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
@@ -70,7 +70,7 @@ const Hisobot = () => {
               </h3>
 
               <a
-                href={`${siteLink}/public/assets/docs/zamiib.pdf`}
+                href={`${siteLink}/src/assets/zamiib.pdf`}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
