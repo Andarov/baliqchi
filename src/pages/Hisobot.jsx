@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import hokim from "../assets/images/other/hokim.png";
 import baliqchi from "../assets/images/svg/Frame.svg";
 
+import adliya from '../assets/docs/adliya.pdf'
+
 const Hisobot = () => {
   const siteLink = window.location.origin;
   useEffect(() => {
@@ -26,7 +28,7 @@ const Hisobot = () => {
               </h3>
 
               <a
-                href={`${siteLink}/src/assets/docs/adliya.pdf`}
+                href={`${adliya}`}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
