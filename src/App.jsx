@@ -25,6 +25,7 @@ import DavlatDasturlari from './pages/DavlatDasturlari';
 import HuquqiyHujjatlar from './pages/HuquqiyHujjatlar';
 import OchiqMalumotlar from './pages/OchiqMalumotlar';
 import Yangiliklar from './pages/Yangiliklar';
+import Hisobot from './pages/Hisobot';
 
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
         </Route>
 
         <Route path='/static' element={<Static />} >
+          <Route path='hisobot' element={<Hisobot />} />
           <Route path='iqtisodiy-korsatkichlar' element={<IqtisodiyKorsatmalar />} />
           <Route path='jamoatchilik-kengashi' element={<JamoatchilikKengashi />} />
           <Route path='xalqaro-munosabat' element={<XalqaroMunosabat />} />

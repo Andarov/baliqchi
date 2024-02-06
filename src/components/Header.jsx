@@ -102,6 +102,9 @@ const Header = () => {
                                         </div>
                                         <ul className={`${dropdown_2 ? '!block' : 'max-950:max-950-hidden'} dropdown_menu`}>
                                             <li className='menu_item'>
+                                                <Link to='/static/hisobot'>2023-yil hisobot</Link>
+                                            </li>
+                                            <li className='menu_item'>
                                                 <Link to='/static/harakatlar-strategiyasi'>Harakatlar strategiyasi</Link>
                                             </li>
                                             <li className='menu_item'>
