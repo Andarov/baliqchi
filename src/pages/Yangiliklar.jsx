@@ -71,7 +71,8 @@ const Yangiliklar = () => {
                       yangilik.images.map((img, index) => (
                         <img
                           key={index}
-                          className="w-full h-full object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
+                          height={400}
+                          className="w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
                           src={img}
                           alt=""
                           onClick={() => {
@@ -82,7 +83,7 @@ const Yangiliklar = () => {
                       ))
                     ) : (
                       <img
-                        className="w-full h-full object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
+                        className="w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
                         src={yangilik.images[0]}
                         alt=""
                         onClick={() => {
