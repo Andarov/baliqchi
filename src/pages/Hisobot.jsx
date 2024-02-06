@@ -26,7 +26,7 @@ const Hisobot = () => {
               </h3>
 
               <a
-                href={`${siteLink}/src/assets/docs/adliya.pdf`}
+                href={`${siteLink}/assets/docs/adliya.pdf`}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
