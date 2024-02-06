@@ -6,7 +6,7 @@ const Hisobot = () => {
   const siteLink = window.location.origin;
   useEffect(() => {
     scrollTo(0, 0);
-    document.title = "Baliqchi tuman hokimligi | Harakatlar strategyiyasi";
+    document.title = "Baliqchi tuman hokimligi | 2023-yil isobot";
   });
 
   return (
