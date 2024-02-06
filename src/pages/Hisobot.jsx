@@ -48,7 +48,7 @@ const Hisobot = () => {
               </h3>
 
               <a
-                href={`/assets/docs/iib.pdf`}
+                href={`https://abdulvahob-abdullayev.netlify.app/img/avatar/my-avatar.png`}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
