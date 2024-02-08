@@ -158,7 +158,7 @@ const Header = () => {
                                                 <Link to='/news/all-news'>Yangiliklar</Link>
                                             </li>
                                             <li className='menu_item'>
-                                                <Link to='/contact'>Bog'lansih</Link>
+                                                <Link to='/contact'>Bog'lanish</Link>
                                             </li>
                                         </ul>
                                     </div>
