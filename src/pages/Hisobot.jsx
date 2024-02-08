@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import { adliyaPdf } from "../assets/data";
+import { adliyaPdf, iibPdf, mibPdf, qabulxonaPdf, zamiibPdf } from "../assets/data";
 import hokim from "../assets/images/other/hokim.png";
 import baliqchi from "../assets/images/svg/Frame.svg";
 
 const Hisobot = () => {
-  const siteLink = 'http://baliqchi.org.uz';
   useEffect(() => {
     scrollTo(0, 0);
     document.title = "Baliqchi tuman hokimligi | 2023-yil isobot";
@@ -47,7 +46,7 @@ const Hisobot = () => {
               </h3>
 
               <a
-                href={`${siteLink}/src/assets/iib.pdf`}
+                href={iibPdf}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
@@ -69,7 +68,7 @@ const Hisobot = () => {
               </h3>
 
               <a
-                href={`${siteLink}/src/assets/zamiib.pdf`}
+                href={zamiibPdf}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
@@ -89,7 +88,7 @@ const Hisobot = () => {
               </h3>
 
               <a
-                href={`${siteLink}/src/assets/docs/mib.pdf`}
+                href={mibPdf}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
@@ -107,7 +106,7 @@ const Hisobot = () => {
               </h3>
 
               <a
-                href={`${siteLink}/src/assets/docs/qabulxona.pdf`}
+                href={qabulxonaPdf}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
