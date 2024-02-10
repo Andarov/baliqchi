@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="w-full max-w-[1280px] px-4 mx-auto">
         <div className="flex items-center justify-between py-5">
           {/* Logo */}
-          <Link to="/" className="flex gap-2 items-center">
+          <Link to="/" className="flex gap-2 items-center text-gray-300">
             <img
               src={coatOfArms}
               alt="flag"
@@ -41,13 +41,13 @@ const Footer = () => {
                 </h3>
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <Link to="/about">Hokimiyat tarixi</Link>
+                    <Link className="text-gray-300" to="/about">Hokimiyat tarixi</Link>
                   </li>
                   <li>
-                    <Link to="/about/structure">Tashkiliy tuzilma</Link>
+                    <Link className="text-gray-300" to="/about/structure">Tashkiliy tuzilma</Link>
                   </li>
                   <li>
-                    <Link to="/about/managers">Rahbariyat</Link>
+                    <Link className="text-gray-300" to="/about/managers">Rahbariyat</Link>
                   </li>
                 </ul>
               </li>
@@ -58,45 +58,45 @@ const Footer = () => {
                 </h3>
                 <ul className="flex flex-col gap-2">
                   <li>
-                    <Link to="/static/hisobot">
+                    <Link className="text-gray-300" to="/static/hisobot">
                       2023-yil hisobot
                     </Link>
                   </li>
                   <li>
-                    <Link to="/static/harakatlar-strategiyasi">
+                    <Link className="text-gray-300" to="/static/harakatlar-strategiyasi">
                       Harakatlar strategiyasi
                     </Link>
                   </li>
                   <li>
-                    <Link to="/static/davlat-dasturlari">
+                    <Link className="text-gray-300" to="/static/davlat-dasturlari">
                       Davlat dasturlari
                     </Link>
                   </li>
                   <li>
-                    <Link to="/static/huquqiy-hujjatlar">
+                    <Link className="text-gray-300" to="/static/huquqiy-hujjatlar">
                       Normativ - Huquqiy hujjatlar
                     </Link>
                   </li>
                   <li>
-                    <Link to="/static/loyihalar">Loyihalar</Link>
+                    <Link className="text-gray-300" to="/static/loyihalar">Loyihalar</Link>
                   </li>
                   <li>
-                    <Link to="/static/xalqaro-munosabat">
+                    <Link className="text-gray-300" to="/static/xalqaro-munosabat">
                       Xalqaro munosabat
                     </Link>
                   </li>
                   <li>
-                    <Link to="/static/jamoatchilik-kengashi">
+                    <Link className="text-gray-300" to="/static/jamoatchilik-kengashi">
                       Jamoatchilik Kengashi
                     </Link>
                   </li>
                   <li>
-                    <Link to="/static/iqtisodiy-korsatkichlar">
+                    <Link className="text-gray-300" to="/static/iqtisodiy-korsatkichlar">
                       Iqtisodiy ko'rsatkichlar
                     </Link>
                   </li>
                   <li>
-                    <Link to="/static/statistik-malumotlar">
+                    <Link className="text-gray-300" to="/static/statistik-malumotlar">
                       Statistik ma'lumotlar
                     </Link>
                   </li>
@@ -110,6 +110,7 @@ const Footer = () => {
                 <ul className="flex flex-col gap-2">
                   <li>
                     <a
+                      className="text-gray-300"
                       target="_blank"
                       href="https://t.me/baliqchi_hokimga_murojat_bot"
                     >
@@ -117,7 +118,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <Link to="/service/ochiq-malumotlar">
+                    <Link className="text-gray-300" to="/service/ochiq-malumotlar">
                       Ochiq ma'lumotlar
                     </Link>
                   </li>

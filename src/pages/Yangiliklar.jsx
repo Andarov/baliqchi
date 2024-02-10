@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 // images
 import hokim from "../assets/images/other/hokim.png";
 import baliqchi from "../assets/images/svg/Frame.svg";
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { query } from "firebase/database";
 import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../api/firebase";
 const Yangiliklar = () => {
-  const { yangilikNomi } = useParams();
 
   const [clickedImg, setClickedImg] = useState("");
   const [openModal, setOpenModal] = useState(false);
@@ -17,15 +16,6 @@ const Yangiliklar = () => {
     scrollTo(0, 0);
     document.title = "Baliqchi tuman hokimligi | Yangiliklar";
   }, []);
-
-  const yangilik = news.find(
-    (item) =>
-      yangilikNomi === item.title.toString().toLowerCase().replace(/\s+/g, "-")
-  );
-
-  const boshqaYangiliklar = news.filter(
-    (item) => item.id !== (yangilik ? yangilik.id : "")
-  );
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
@@ -48,7 +38,6 @@ const Yangiliklar = () => {
       });
 
       setNews(sortedArr);
-      setLoading(false);
     });
   };
 
@@ -60,85 +49,35 @@ const Yangiliklar = () => {
     <div className="py-12 max-800:py-10 max-550:pt-6">
       <div className="flex gap-5 container max-550:flex-col max-[500px]:px-0">
         <div className="w-full grow">
-          {yangilik && (
-            <div className="mb-10 space-y-6">
-              <div className="flex flex-col gap-y-4 mb-10">
-                <div className="space-y-6 max-[500px]:px-5">
-                  <h1>{yangilik.title}</h1>
-                  <p className="text-gray-600">{yangilik.date}</p>
-                  <div className={`flex flex-col space-y-5`}>
-                    {yangilik.images.length > 1 ? (
-                      yangilik.images.map((img, index) => (
-                        <img
-                          key={index}
-                          height={400}
-                          className="w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
-                          src={img}
-                          alt=""
-                          onClick={() => {
-                            setClickedImg(img);
-                            setOpenModal(true);
-                          }}
-                        />
-                      ))
-                    ) : (
-                      <img
-                        className="w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
-                        src={yangilik.images[0]}
-                        alt=""
-                        onClick={() => {
-                          setClickedImg(yangilik.images[0]);
-                          setOpenModal(true);
-                        }}
-                      />
-                    )}
-                  </div>
 
-                  <p>{yangilik.description}</p>
-                  {yangilik.video_link && (
-                    <iframe
-                      className="w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
-                      src={yangilik.video_link}
-                      frameborder="0"
-                      allowFullScreen="true"
-                    ></iframe>
-                  )}
-                </div>
-              </div>
-
-              <h2 className="max-[500px]:px-5">Boshqa yangiliklar</h2>
-            </div>
-          )}
-
-          {yangilikNomi === "all-news" && (
-            <h1 className="mb-10 max-[500px]:px-5">Barcha yangiliklar</h1>
-          )}
+          <h1 className="mb-10 max-[500px]:px-5">Barcha yangiliklar</h1>
 
           <ul className="grid gap-10">
-            {boshqaYangiliklar.map((item) => {
+            {news.map((item) => {
               return (
-                <li key={item.id} className="flex flex-col gap-y-4">
-                  <img
-                    className="w-full h-96 object-contain rounded bg-gray-400 max-700:h-72 max-550:h-64"
-                    src={item.images[0]}
-                    alt=""
-                    onClick={() => {
-                      setClickedImg(item.images[0]);
-                      setOpenModal(true);
-                    }}
-                  />
-                  <div className="space-y-3 max-[500px]:px-5">
-                    <p className="text-gray-600">{item.date}</p>
-                    <h3 className="text-xl font-semibold">{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
+                <li key={item.id}>
+                  <Link to={`/news/${item.id}`} className="flex gap-4 p-5 rounded-md bg-gray-200 max-700:flex-col max-700:p-0 max-700:bg-transparent">
+                    <img
+                      width={320}
+                      height={320}
+                      className="w-80 h-80 object-cover rounded bg-gray-400 max-700:w-full max-700:rounded-none max-450:h-64 max-[400px]:h-56"
+                      src={item.images[0]}
+                      alt=""
+                    />
+                    <div className="flex items-start flex-col gap-3 max-[500px]:px-5">
+                      <p className="text-gray-600">{item.date}</p>
+                      <h3 className="text-xl font-semibold line-clamp-5">{item.title}</h3>
+                      <p className="line-clamp-4 mb-auto  max-700:hidden">{item.description}</p>
+                      <Link to={`/news/${item.id}`} className="bg-[#2E4374] text-white px-6 py-2 rounded-md text-base">Ba'tafsil o'qish</Link>
+                    </div>
+                  </Link>
                 </li>
               );
             })}
           </ul>
         </div>
 
-        <div className="min-w-[310px] max-w-xs max-550:max-w-full space-y-6 max-800:hidden max-550:block max-550:min-w-0">
+        <div className="min-w-[310px] max-w-xs max-550:max-w-full space-y-6 max-950:hidden max-550:block max-550:min-w-0">
           <img
             src={baliqchi}
             alt=""
@@ -188,22 +127,6 @@ const Yangiliklar = () => {
             </svg>
           </div>
         </div>
-      </div>
-
-      {/* rasm ezilgandagi modal */}
-      <div
-        onClick={() => {
-          setOpenModal(false);
-        }}
-        className={`${
-          openModal ? "flex" : "hidden"
-        } items-center justify-center fixed w-full min-h-screen top-0 right-0 bg-black bg-opacity-70 z-20`}
-      >
-        <img
-          src={clickedImg}
-          alt=""
-          className="w-[950px] h-full max-h-[600px] object-cover max-950:w-full"
-        />
       </div>
     </div>
   );

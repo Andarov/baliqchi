@@ -26,6 +26,7 @@ import HuquqiyHujjatlar from './pages/HuquqiyHujjatlar';
 import OchiqMalumotlar from './pages/OchiqMalumotlar';
 import Yangiliklar from './pages/Yangiliklar';
 import Hisobot from './pages/Hisobot';
+import NewsDetail from './pages/NewsDetail';
 
 
 const App = () => {
@@ -59,7 +60,8 @@ const App = () => {
           <Route path='ochiq-malumotlar' element={<OchiqMalumotlar />} />
         </Route>
 
-          <Route path='news/:yangilikNomi' element={<Yangiliklar />} />
+        <Route path='news' element={<Yangiliklar />} />
+        <Route path='/news/:newsTitle' element={<NewsDetail />} />
 
         <Route path='*' element={<NotFound />} />
       </Route>

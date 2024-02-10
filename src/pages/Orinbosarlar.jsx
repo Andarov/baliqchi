@@ -42,7 +42,7 @@ const Orinbosarlar = () => {
                                                         soat {orinbosar.boshlashVaqti} dan {orinbosar.tugatishVaqti}{" "}
                                                         gacha
                                                     </p>
-                                                    <p>Telefon raqam: <a target='_blank' href={`tel:${orinbosar.telephone}`}>{orinbosar.telephone}</a></p>
+                                                    <p>Telefon raqam: <a href={`tel:+998743232211`}>+998(74)-323-22-11</a></p>
                                                 </div>
                                                 <div className="space-x-3  flex justify-between items-center">
                                                     <div className='flex gap-2 items-center'>

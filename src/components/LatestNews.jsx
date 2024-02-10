@@ -44,10 +44,7 @@ const LatestNews = () => {
                   <li key={item.id}>
                     <Link
                       key={item.id}
-                      to={`/news/${item.title
-                        .toString()
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
+                      to={`/news/${item.id}`}
                       className="flex flex-col gap-y-4"
                     >
                       <img

@@ -17,8 +17,11 @@ const IqtisodiyKorsatmalar = () => {
                         <h1 className='mb-5'>Iqtisodiy ko’rsatkichlar</h1>
                         <strong>Baliqchi tumani 2020-yil yanvar-sentyabr oylarida belgilangan asosiy makroiqtisodiy koʻrsatkichlari</strong>
                     </div>
-                    <img className='w-[840px] h-auto max-1130::w-full max-1130:h-auto mb-6' src={iqtisodiy} alt="" />
-                    <a href={`${siteLink}/src/assets/images/other/korsatmalar.png`} download className="rounded-full border border-gray-400 py-3 px-6 max-800:ml-5">Rasmni yuklab olish</a>
+                    <div className="max-h-96 overflow-y-auto max-450:max-h-max mb-6">
+                        <img className='w-[840px] h-auto max-1130::w-full max-1130:h-auto' src={iqtisodiy} alt="" />
+                    </div>
+
+                    <a href={`${siteLink}${iqtisodiy}`} download className="inline-block rounded-full border border-gray-400 py-3 px-6 max-800:ml-5">Rasmni yuklab olish</a>
                 </div>
 
                 <div className="min-w-[280px] max-w-xs space-y-6 max-1130:max-w-[280px] max-950:hidden max-550:block max-550:min-w-0 max-550:max-w-full max-550:px-5">

@@ -1,9 +1,15 @@
 import React, { useEffect } from "react";
-import { adliyaPdf, iibPdf, mibPdf, qabulxonaPdf, zamiibPdf } from "../assets/data";
 import hokim from "../assets/images/other/hokim.png";
 import baliqchi from "../assets/images/svg/Frame.svg";
 
+import adliya from "../assets/docs/adliya.pdf";
+import iib from "../assets/docs/iib.pdf";
+import mib from "../assets/docs/mib.pdf";
+import qabulxona from "../assets/docs/qabulxona.pdf";
+import zamiib from "../assets/docs/zamiib.pdf";
+
 const Hisobot = () => {
+  const siteLink = window.location.origin;
   useEffect(() => {
     scrollTo(0, 0);
     document.title = "Baliqchi tuman hokimligi | 2023-yil isobot";
@@ -19,14 +25,14 @@ const Hisobot = () => {
             <div className="flex flex-col max-800:items-start border-b border-gray-500 py-6 items-end">
               <h3 className="mb-5 max-800:text-sm text-base">
                 2023 yil davomida Baliqchi tumanidagi davlat organlari va
-                tashkilotlarida huquq ijodkorligi faoliyati va huquqni qo‘llash
+                tashkilotlarida huquq ijodkorligi faoliyati va huquqni qo'llash
                 amaliyoti holati yuzasidan tuman{" "}
-                <strong>adliya bo‘limi boshlig‘i S.Soloxiddinovning</strong>{" "}
-                axboroti to‘g‘risida
+                <strong>adliya bo'limi boshlig'i S.Soloxiddinovning</strong>{" "}
+                axboroti to'g'risida
               </h3>
 
               <a
-                href={adliyaPdf}
+                href={`${siteLink}${adliya}`}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
@@ -37,16 +43,16 @@ const Hisobot = () => {
             {/* iib */}
             <div className="flex flex-col max-800:items-start border-b border-gray-500 py-6 items-end">
               <h3 className="mb-5 max-800:text-sm text-base">
-                Baliqchi tumani hududida 2023 yil yakuni bo‘yicha tuman hududida
+                Baliqchi tumani hududida 2023 yil yakuni bo'yicha tuman hududida
                 jinoyat va huquqbuzarliklarni oldini olish va ularning
                 profilkatikasi hamda 3-sektor hududida amalga oshirilgan ishlari
                 yuzasidan tuman{" "}
-                <strong>IIB boshlig‘i I.D.M.Tojiboevning</strong> hisoboti
-                to‘g‘risida
+                <strong>IIB boshlig'i I.D.M.Tojiboevning</strong> hisoboti
+                to'g'risida
               </h3>
 
               <a
-                href={iibPdf}
+                href={`${siteLink}${iib}`}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
@@ -59,16 +65,16 @@ const Hisobot = () => {
               <h3 className="mb-5 max-800:text-sm text-base">
                 Baliqchi tumani{" "}
                 <strong>
-                  Ichki ishlar bo‘limi boshlig‘ining o‘rinbosari jamoat
-                  xavfsizligi xizmati boshlig‘i podpolkovnik Sh.A.Akbarovning
+                  Ichki ishlar bo'limi boshlig'ining o'rinbosari jamoat
+                  xavfsizligi xizmati boshlig'i podpolkovnik Sh.A.Akbarovning
                 </strong>{" "}
                 huquqbuzarliklar profilaktikasi va jinoyatchilikni barvaqt
                 oldini olish borasida 2023 yil davomida amalga oshirilgan
-                ishlari yuzasidan xisoboti to‘g‘risida
+                ishlari yuzasidan xisoboti to'g'risida
               </h3>
 
               <a
-                href={zamiibPdf}
+                href={`${siteLink}${zamiib}`}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
@@ -79,16 +85,16 @@ const Hisobot = () => {
             {/* mib */}
             <div className="flex flex-col max-800:items-start border-b border-gray-500 py-6 items-end">
               <h3 className="mb-5 max-800:text-sm text-base">
-                O‘zbekiston Respublikasi Bosh prokuraturasi huzuridagi{" "}
+                O'zbekiston Respublikasi Bosh prokuraturasi huzuridagi{" "}
                 <strong>
-                  Majburiy ijro byurosi Baliqchi tumani bo‘limi boshlig‘i
+                  Majburiy ijro byurosi Baliqchi tumani bo'limi boshlig'i
                   D.O.Xusanovning
                 </strong>
-                2023 yil davomidagi faoliyati yuzasidan hisoboti to‘g‘risida
+                2023 yil davomidagi faoliyati yuzasidan hisoboti to'g'risida
               </h3>
 
               <a
-                href={mibPdf}
+                href={`${siteLink}${mib}`}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >
@@ -99,14 +105,14 @@ const Hisobot = () => {
             {/* qabulxona */}
             <div className="flex flex-col max-800:items-start border-b border-gray-500 py-6 items-end">
               <h3 className="mb-5 max-800:text-sm text-base">
-                O‘zbekiston Respublikasi Prezidentining Baliqchi tumanidagi{" "}
+                O'zbekiston Respublikasi Prezidentining Baliqchi tumanidagi{" "}
                 <strong>Halq qabulxonasi mudiri A.Ibrohimovning</strong> 2023
-                yil yakuni aholi murojaatlari bilan ishlashda yo‘l qo‘yilgan
-                qonunbuzilishi holatlari yuzasidan axborati to‘g‘risida
+                yil yakuni aholi murojaatlari bilan ishlashda yo'l qo'yilgan
+                qonunbuzilishi holatlari yuzasidan axborati to'g'risida
               </h3>
 
               <a
-                href={qabulxonaPdf}
+                href={`${siteLink}${qabulxona}`}
                 download
                 className="max-800:text-sm whitespace-nowrap rounded-full border border-gray-400 py-3 px-6"
               >

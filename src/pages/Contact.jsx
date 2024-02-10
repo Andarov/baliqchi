@@ -30,7 +30,7 @@ const Contact = () => {
                     }} className="w-full flex flex-col items-start gap-5 max-lg:items-center max-[800px]:max-w-[600px]">
                         <div className="flex justify-between gap-5 w-full max-950:flex-col">
                             <input type="text" placeholder='F.I.SH' />
-                            <input type="tel" placeholder='+998' required pattern="(\+998|8)[\- ]?\d{2}[\- ]?\d{3}[\- ]?\d{2}[\- ]?\d{2}" />
+                            <input type="tel" placeholder='+998 XX-XXX-XX-XX' required pattern="(\+998|8)[\- ]?\d{2}[\- ]?\d{3}[\- ]?\d{2}[\- ]?\d{2}" />
                         </div>
                         <input type="email" placeholder='E-pochta' />
                         <textarea placeholder='Xabaringiz' className='h-56'></textarea>
