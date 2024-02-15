@@ -60,6 +60,8 @@ const NewsDetail = () => {
     }, [location]);
 
     const findNews = news.find((news) => news.id === newsTitle);
+    console.log(findNews);
+
     return (
         <div className='py-12 max-800:py-10 max-550:pt-6'>
             <div className="flex gap-5 container max-550:flex-col max-[500px]:px-0">
@@ -100,6 +102,9 @@ const NewsDetail = () => {
                                     <div className="flex items-start flex-col gap-3 max-[500px]:px-5">
                                         <h1 className="text-2xl font-semibold">{findNews.title}</h1>
                                         <p className="mb-auto">{findNews.description}</p>
+                                        {
+                                            findNews.video_link && <iframe className='w-full h-96 bg-gray-200' src={findNews.video_link} frameborder="0"></iframe>
+                                        }
                                     </div>
                                 </div>
                                 :
