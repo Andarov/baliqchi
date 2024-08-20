@@ -27,6 +27,7 @@ import OchiqMalumotlar from './pages/OchiqMalumotlar';
 import Yangiliklar from './pages/Yangiliklar';
 import Hisobot from './pages/Hisobot';
 import NewsDetail from './pages/NewsDetail';
+import Korrupsiya from './pages/Korrupsiya';
 
 
 const App = () => {
@@ -62,6 +63,8 @@ const App = () => {
 
         <Route path='news' element={<Yangiliklar />} />
         <Route path='/news/:newsTitle' element={<NewsDetail />} />
+
+        <Route path='korrupsiya-murojaat' element={<Korrupsiya />} />
 
         <Route path='*' element={<NotFound />} />
       </Route>
