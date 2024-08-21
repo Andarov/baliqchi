@@ -256,7 +256,7 @@ export const news = [
 ];
 
 
-import kambagallik from './links-img/kambagallik.png'
+import kambagallik from './links-img/mahmudjon.jpg'
 import qurilish from './links-img/qurilish.jpg'
 import investitsiya from './links-img/investitsiya.png'
 import suv from './links-img/suv.jpg'
@@ -288,11 +288,11 @@ export const orinbosarlar = [
         qabulKuni: 'Dushanba',
         boshlashVaqti: '8:00',
         tugatishVaqti: '18:00',
-        telephone: '+998(74)-323-22-11',
+        telephone: '+998(94)-104-11-10',
         img: kambagallik,
-        ismi: "Yulchiyev Boburmirzo Umarovich",
+        ismi: "Nurmatov Mahmudjon Ravshanbekovich",
         lavozim: `O'rinbosar`,
-        yili: 1972,
+        yili: 1985,
         malumoti: 'oliy',
         universitet: "Andijon muhandislik iqtisodiyot instituti"
     },
