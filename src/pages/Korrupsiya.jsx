@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect } from "react";
 
 const Korrupsiya = () => {
@@ -6,28 +7,81 @@ const Korrupsiya = () => {
     document.title = "Baliqchi tuman hokimligi | Korrupsiya murojaat";
   });
 
+  // comment is not andifayned
+  const chatId = -1002231220656;
+  const telegramBotId = "7278387106:AAG9xv6Xa85eDM35zKrFJaUClCOM2VtZC_A";
+  const url = "https://api.telegram.org/bot" + telegramBotId + "/sendMessage";
+
+  // get input value
+  const getInputValue = (input) => {
+    return input.value.trim();
+  };
+
+  // send request
+  const sendRequest = (e) => {
+    e.preventDefault();
+    const ism = getInputValue(e.target.querySelector("#ism"));
+    const com = getInputValue(e.target.querySelector("#komen"));
+    const tel = getInputValue(e.target.querySelector("#telefon"));
+
+    const message = `👤 Ismi: ${ism}
+☎️ Telefon raqami: ${tel}
+✉️ Izoh: ${com}`;
+
+    // form data
+    const formData = {
+      chat_id: chatId,
+      text: message,
+    };
+
+    axios
+      .post(url, formData)
+      .then(() => {
+        alert("So'rov muvaffaqiyatli yuborildi!");
+        window.location.reload();
+      })
+      .catch(() => {
+        alert("Nimadir xato ketdi!");
+      });
+  };
+
   return (
     <div className="pt-12 max-800:pt-10 max-550:pt-6">
       <div className="flex flex-col items-center justify-center">
         <div className="container mb-20 max-[800px]:grid-cols-1">
           <h1 className="mb-8">Korrupsiya haqida xabar berish</h1>
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Hozrida sayt test jarayonida");
-            }}
+            onSubmit={sendRequest}
             className="w-full flex flex-col items-start gap-5 max-lg:items-center max-[800px]:max-w-[600px]"
           >
             <div className="flex justify-between gap-5 w-full max-950:flex-col">
-              <input type="text" placeholder="F.I.SH" />
               <input
-                type="tel"
-                placeholder="+998 XX-XXX-XX-XX"
+                id="ism"
                 required
+                min={4}
+                max={144}
+                type="text"
+                placeholder="F.I.SH"
+              />
+
+              <input
+                required
+                type="tel"
+                id="telefon"
+                placeholder="+998 XX-XXX-XX-XX"
                 pattern="(\+998|8)[\- ]?\d{2}[\- ]?\d{3}[\- ]?\d{2}[\- ]?\d{2}"
               />
             </div>
-            <textarea placeholder="Xabaringiz" className="h-56"></textarea>
+
+            <textarea
+              required
+              min={12}
+              id="komen"
+              maxLength={496}
+              className="h-56"
+              placeholder="Xabaringiz"
+            ></textarea>
+
             <button className="py-3.5 px-6 bg-[#2E4374] text-white rounded-lg max-[400px]:w-full">
               Yuborish
             </button>
