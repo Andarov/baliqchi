@@ -104,7 +104,7 @@ const Deputatlar = () => {
                                 alt="Baliqchi tumani"
                                 className="w-full rounded-md border"
                             />
-                            <a target='_blank' href='https://t.me/baliqchi_hokimga_murojat_bot' className="block w-full bg-[#424769] text-white py-2 rounded-md">Murojaat Qilish</a>
+                            <a target='_blank' href='https://t.me/baliqchitumanhokimi' className="block w-full bg-[#424769] text-white py-2 rounded-md">Murojaat Qilish</a>
                         </div>
                         
                         {/* hokimiyat telegram kanal */}
