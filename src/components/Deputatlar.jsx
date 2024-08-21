@@ -87,7 +87,7 @@ const Deputatlar = () => {
                         <div className="p-5 w-full shadow-lg border rounded-2xl text-center space-y-3 max-1130:hidden max-550:block">
                             <h3 className="font-bold text-2xl">Korrupsiya</h3>
                             <p className='text-left'>Sizda korrupsiya togrisida malumotlar bormi, bizga bu haqida xabar bering.</p>
-                            <p>Tezkor raqam: <a className='text-blue-400' href="tel:+998882320702">+99888232070</a></p>
+                            <p>Tezkor raqam: <a className='text-blue-400' href="tel:+998882320702">+998882320702</a></p>
                             <img
                                 src={korrupsia}
                                 alt="Baliqchi tumani"
