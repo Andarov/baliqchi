@@ -277,7 +277,7 @@ export const orinbosarlar = [
         tugatishVaqti: '11:00',
         telephone: '+998(74)-323-22-11',
         img: hokim,
-        ismi: "Jasur Abduraimov",
+        ismi: "Abduraimov Jasurbek Odiljonovich",
         lavozim: 'Hokim',
         yili: 1972,
         malumoti: 'oliy',
