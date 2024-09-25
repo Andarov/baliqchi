@@ -275,7 +275,7 @@ export const orinbosarlar = [
         qabulKuni: 'Shanba',
         boshlashVaqti: '9:00',
         tugatishVaqti: '11:00',
-        telephone: '+998(74)-323-22-11',
+        telephone: '+998(74)-323-10-23',
         img: hokim,
         ismi: "Abdurayimov Jasurbek Odiljonovich",
         lavozim: 'Hokim',
@@ -300,7 +300,7 @@ export const orinbosarlar = [
         id: 2,
         qabulKuni: 'Seshanba',
         boshlashVaqti: '8:00',
-        telephone: '+998(74)-323-22-11',
+        telephone: '+998(74)-323-10-23',
         tugatishVaqti: '18:00',
         img: qurilish,
         yili: 1973,
@@ -310,10 +310,10 @@ export const orinbosarlar = [
         universitet: "Farg'ona politexnika instituti"
     },
     {
-        id: 4,
+        id: 3,
         qabulKuni: 'Payshanba',
         boshlashVaqti: '8:00',
-        telephone: '+998(74)-323-22-11',
+        telephone: '+998(74)-323-10-23',
         tugatishVaqti: '18:00',
         img: suv,
         lavozim: `O'rinbosar`,
@@ -323,10 +323,10 @@ export const orinbosarlar = [
         universitet: "Volgograd qishloq xo'jaligi instuti"
     },
     {
-        id: 5,
+        id: 4,
         qabulKuni: 'Juma',
         boshlashVaqti: '8:00',
-        telephone: '+998(74)-323-22-11',
+        telephone: '+998(74)-323-10-23',
         tugatishVaqti: '18:00',
         img: yoshlar,
         yili: 1988,
@@ -336,10 +336,10 @@ export const orinbosarlar = [
         universitet: "Andijon davlat universiteti"
     },
     {
-        id: 6,
+        id: 5,
         qabulKuni: 'Shanba',
         boshlashVaqti: '8:00',
-        telephone: '+998(74)-323-22-11',
+        telephone: '+998(74)-323-10-23',
         tugatishVaqti: '18:00',
         img: xotin,
         yili: 1976,
