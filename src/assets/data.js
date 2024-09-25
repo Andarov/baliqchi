@@ -310,19 +310,6 @@ export const orinbosarlar = [
         universitet: "Farg'ona politexnika instituti"
     },
     {
-        id: 3,
-        qabulKuni: 'Chorshanba',
-        boshlashVaqti: '8:00',
-        telephone: '+998(74)-323-22-11',
-        tugatishVaqti: '18:00',
-        img: investitsiya,
-        lavozim: `O'rinbosar`,
-        yili: 1991,
-        ismi: "Abdulxomidov Saydullo Abdillojon o'gli",
-        malumoti: 'oliy',
-        universitet: "Andijon qishloq xo'jaligi instuti"
-    },
-    {
         id: 4,
         qabulKuni: 'Payshanba',
         boshlashVaqti: '8:00',
