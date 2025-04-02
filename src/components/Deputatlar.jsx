@@ -12,7 +12,7 @@ import korrupsia from '../assets/images/korrupsia.jpg';
 import babur from '../assets/images/babur.png'
 
 const Deputatlar = () => {
-    const orinbosarlarData = orinbosarlar.slice(0, 4);
+    const orinbosarlarData = orinbosarlar.slice(0, 5);
     return (
         <div className="w-full flex justify-center py-12">
             <div className="container">
