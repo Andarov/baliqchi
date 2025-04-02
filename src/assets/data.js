@@ -256,7 +256,7 @@ export const news = [
 ];
 
 
-import kambagallik from './links-img/mahmudjon.jpg'
+import kambagallik from './links-img/iqtisod.jpg'
 import qurilish from './links-img/qurilish.jpg'
 import investitsiya from './links-img/investitsiya.png'
 import suv from './links-img/suv.jpg'
@@ -288,13 +288,13 @@ export const orinbosarlar = [
         qabulKuni: 'Dushanba',
         boshlashVaqti: '8:00',
         tugatishVaqti: '18:00',
-        telephone: '+998(94)-104-11-10',
+        telephone: '+998(74)-323-10-23',
         img: kambagallik,
-        ismi: "Nurmatov Mahmudjon Ravshanbekovich",
+        ismi: "Abduvaliyev Ulug'bek Shamsutdinovich",
         lavozim: `O'rinbosar`,
-        yili: 1985,
+        yili: 1989,
         malumoti: 'oliy',
-        universitet: "Andijon muhandislik iqtisodiyot instituti"
+        universitet: "Andijon mashinasozlik instituti"
     },
     {
         id: 2,
