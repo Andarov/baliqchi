@@ -255,7 +255,6 @@ export const news = [
     },
 ];
 
-
 import kambagallik from './links-img/iqtisod.jpg'
 import qurilish from './links-img/qurilish.jpg'
 import investitsiya from './links-img/investitsiya.png'

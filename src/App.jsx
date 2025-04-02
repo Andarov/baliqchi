@@ -62,7 +62,7 @@ const App = () => {
         </Route>
 
         <Route path='news' element={<Yangiliklar />} />
-        <Route path='/news/:newsTitle' element={<NewsDetail />} />
+        <Route path='/news/:id' element={<NewsDetail />} />
 
         <Route path='korrupsiya-murojaat' element={<Korrupsiya />} />
 

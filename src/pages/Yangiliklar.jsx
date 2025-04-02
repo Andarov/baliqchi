@@ -3,14 +3,12 @@ import React, { useEffect, useState } from "react";
 import hokim from "../assets/images/other/hokim.png";
 import baliqchi from "../assets/images/svg/Frame.svg";
 import { Link } from "react-router-dom";
-import { query } from "firebase/database";
-import { collection, onSnapshot } from "firebase/firestore";
-import { db } from "../api/firebase";
-const Yangiliklar = () => {
 
+import { news } from "../assets/data";
+
+const Yangiliklar = () => {
   const [clickedImg, setClickedImg] = useState("");
   const [openModal, setOpenModal] = useState(false);
-  const [news, setNews] = useState([]);
 
   useEffect(() => {
     scrollTo(0, 0);
@@ -22,28 +20,6 @@ const Yangiliklar = () => {
       setOpenModal(false);
     }
   });
-
-  const fetchData = async () => {
-    const q = query(collection(db, "news"));
-    onSnapshot(q, (querySnapshot) => {
-      let newsArr = [];
-      querySnapshot.forEach((doc) => {
-        newsArr.push({ ...doc.data(), id: doc.id });
-      });
-
-      let sortedArr = newsArr.sort((a, b) => {
-        const dateA = new Date(a.date.split(".").reverse().join("."));
-        const dateB = new Date(b.date.split(".").reverse().join("."));
-        return dateB - dateA;
-      });
-
-      setNews(sortedArr);
-    });
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <div className="py-12 max-800:py-10 max-550:pt-6">
@@ -57,24 +33,29 @@ const Yangiliklar = () => {
               return (
                 <li key={item.id}>
                   <Link to={`/news/${item.id}`} className="flex gap-4 p-5 rounded-md bg-gray-200 max-700:flex-col max-700:p-0 max-700:bg-transparent">
-                    <img
-                      width={320}
-                      height={320}
-                      className="w-80 h-80 object-cover rounded bg-gray-400 max-700:w-full max-700:rounded-none max-450:h-64 max-[400px]:h-56"
-                      src={item.images[0]}
-                      alt=""
-                    />
+                    {item.image.length > 0 && (
+                      <img
+                        width={320}
+                        height={320}
+                        className="w-80 h-80 object-cover rounded bg-gray-400 max-700:w-full max-700:rounded-none max-450:h-64 max-[400px]:h-56"
+                        src={item.image[0]}
+                        alt={item.title}
+                      />
+                    )}
                     <div className="flex items-start flex-col gap-3 max-[500px]:px-5">
-                      <p className="text-gray-600">{item.date}</p>
+                      <p className="text-gray-600">{item.date.toLocaleDateString("uz-UZ")}</p>
                       <h3 className="text-xl font-semibold line-clamp-5">{item.title}</h3>
-                      <p className="line-clamp-4 mb-auto  max-700:hidden">{item.description}</p>
-                      <Link to={`/news/${item.id}`} className="bg-[#2E4374] text-white px-6 py-2 rounded-md text-base">Ba'tafsil o'qish</Link>
+                      <p className="line-clamp-4 mb-auto max-700:hidden">{item.description}</p>
+                      <Link to={`/news/${item.id}`} className="bg-[#2E4374] text-white px-6 py-2 rounded-md text-base">
+                        Batafsil o‘qish
+                      </Link>
                     </div>
                   </Link>
                 </li>
               );
             })}
           </ul>
+
         </div>
 
         <div className="min-w-[310px] max-w-xs max-550:max-w-full space-y-6 max-950:hidden max-550:block max-550:min-w-0">
